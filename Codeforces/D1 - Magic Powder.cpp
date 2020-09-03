@@ -1,5 +1,4 @@
 #include <bits/stdc++.h>
-
 using namespace std;
 int n, k, a[1005], b[1005], ans = 0;
 bool max_cookies(int x) {
