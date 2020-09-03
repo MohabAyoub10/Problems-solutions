@@ -4,7 +4,6 @@ int main() {
   int t, n, q;
   cin >> t;
   while (t--) {
-
     cin >> n >> q;
     long long int cum[n] = {0};
 
