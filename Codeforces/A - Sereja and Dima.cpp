@@ -1,7 +1,5 @@
 #include <bits/stdc++.h>
-
 using namespace std;
-
 int n , Spoints=0 , Dpoints=0;
 deque <int> cards ;
 
