@@ -1,9 +1,7 @@
 #include <bits/stdc++.h>
-
 #define Fast_IO ios::sync_with_stdio(false), cin.tie(0), cout.tie(0)
 using namespace std;
 int main() {
-
   Fast_IO;
   int n;
   string s;
@@ -18,7 +16,6 @@ int main() {
       if (i % 2 != 0) c.push_back(s[i]);
       else c.push_front(s[i]);
     }
-
   }
   for (auto x: c) {
     cout << x;
