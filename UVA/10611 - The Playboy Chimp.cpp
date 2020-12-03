@@ -36,7 +36,6 @@ int main() {
     cin >> a[i];
   }
   cin >> q;
-
   for (int i = 0; i < q; i++) {
     int x;
     cin >> x;
