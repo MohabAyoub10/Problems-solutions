@@ -8,10 +8,7 @@ int main() {
   map < int, int > M; vector < int > v;
   for (int i = 0; i < n; i++) {
     cin >> arr[i];
-    M.insert({
-      arr[i],
-      i + 1
-    });
+    M.insert({arr[i], i + 1});
   }
   for (int i = 1; i <= n; i++) {
     v.push_back(M[i]);
