@@ -1,38 +1,24 @@
 #include <bits/stdc++.h>
 using namespace std;
-int n , Spoints=0 , Dpoints=0;
-deque <int> cards ;
-
-int main() {
-
-cin>> n ;
-for(int i=0 ; i < n ; i++){
-    int x ;
-     cin>> x ;
-     cards.push_back(x) ;
-}
-
- while(cards.size()>0)
+int main()
+{
+    int n, Spoints = 0, Dpoints = 0;
+    cin >> n;
+    deque<int> card;
+    for (int i = 0; i < n; ++i)
     {
-        Spoints+=max(cards.front(), cards.back());
-          if(cards.front()>cards.back())
-            cards.pop_front();
-
-           else
-            cards.pop_back();
-
-         if(cards.size()==0)
-            break;
-
-        Dpoints+=max(cards.front(), cards.back());
-
-        if(cards.front()>cards.back())
-            cards.pop_front();
-        else
-        cards.pop_back();
-
-         if(cards.size()==0)
-            break;
+        int x;
+        cin >> x;
+        card.push_back(x);
     }
-cout<<Spoints<<" "<<Dpoints<<endl;
+    for (int i = 0; !card.empty(); ++i)
+    {
+        if (i % 2 == 0)
+            Spoints += max(card.front(), card.back());
+        else
+            Dpoints += max(card.front(), card.back());
+        if (card.front() > card.back())card.pop_front();
+        else card.pop_back();
+    }
+    cout << Spoints << " " << Dpoints;
 }
